@@ -1,13 +1,7 @@
 import Player from '@vimeo/player';
 import throttle from 'lodash.throttle';
 
-const playerOptions = {
-  url: 'https://player.vimeo.com/video/236203659',
-  width: 640,
-  height: 360
-};
-
-const videoPlayer = document.getElementById('video-container');
+const videoPlayer = document.getElementById('vimeo-player');
 
 const player = new Player(videoPlayer, playerOptions);
 
