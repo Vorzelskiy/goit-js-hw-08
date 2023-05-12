@@ -38,14 +38,19 @@ const clearFormState = () => {
 const submitForm = (event) => {
   event.preventDefault();
 
-  const formState = {
-    email: emailInput.value,
-    message: messageInput.value,
-  };
+  const emailValue = emailInput.value.trim();
+  const messageValue = messageInput.value.trim();
 
-  console.log(formState);
+  if (emailValue && messageValue) {
+    const formState = {
+      email: emailValue,
+      message: messageValue,
+    };
 
-  clearFormState();
+    console.log(formState);
+
+    clearFormState();
+  }
 };
 
 
